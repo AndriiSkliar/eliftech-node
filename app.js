@@ -4,7 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const participantsRouter = require("./routes/api/participants");
-const registerRouter = require("./routes/api/register");
+const registersRouter = require("./routes/api/registers");
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/participants", participantsRouter);
-app.use("/api/register", registerRouter);
+app.use("/api/registers", registersRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

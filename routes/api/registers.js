@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { addParticipant } = require("../../controllers/register");
+const { addParticipant } = require("../../controllers/registers");
 
 const { validateBody } = require("../../middlewares");
 
