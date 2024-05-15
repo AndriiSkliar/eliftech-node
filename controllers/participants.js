@@ -10,7 +10,8 @@ const getAll = async (req, res) => {
 const getById = async (req, res) => {
   const { id } = req.params;
   const result = await Participant.findById(id);
-
+  const result1 = await Event.find();
+  console.log(result1)
   if (!result) {
     throw HttpError(404, "Not found");
   }
