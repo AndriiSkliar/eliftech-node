@@ -30,9 +30,9 @@ const participantSchema = new Schema(
     },
     eventFeedback: {
       type: String, 
-      enum: ["Social media", "Friends", "Found myself"],
+      enum: ["social media", "friends", "found myself"],
       required: [true, "Feedback is required"],
-      default: "Social media",
+      default: "social media",
     },
   },
   { versionKey: false, timestamps: true }
