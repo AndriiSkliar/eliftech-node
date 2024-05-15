@@ -28,6 +28,10 @@ const participantSchema = new Schema(
       type: String,
       required: [true, "Change event is required"],
     },
+    eventId: {
+      type: String,
+      required: [true, "Change event is required"],
+    },
     eventFeedback: {
       type: String, 
       enum: ["social media", "friends", "found myself"],
@@ -45,6 +49,7 @@ const addSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required(),
   birthday: Joi.date().required(),
   event: Joi.string().required(),
+  eventId: Joi.string().required(),
   eventFeedback: Joi.string().required(),
 });
 
