@@ -18,7 +18,13 @@ const getById = async (req, res) => {
   res.status(200).json(result);
 }; 
 
+const addParticipant = async (req, res) => {
+  const result = await Participant.create(req.body);
+  res.status(201).json(result);
+};
+
 module.exports = {
   getAll: ctrlWrapper(getAll),
   getById: ctrlWrapper(getById),
+  addParticipant: ctrlWrapper(addParticipant),
 };
