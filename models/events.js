@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const eventSchema = new Schema(
     {
     id: {
-      type: Number,
+      type: String,
     },
     title: {
       type: String,
