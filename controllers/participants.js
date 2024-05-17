@@ -12,7 +12,7 @@ const getAll = async (_, res) => {
 
 const getById = async (req, res) => {
   const { id } = req.params;
-  const result = await Participant.find({ eventId: { $regex: id } });
+  const result = await Participant.find({ eventId: id });
 
   if (!result || result.length === 0) {
     throw HttpError(404, "Not found");
